@@ -1,7 +1,4 @@
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Acorn Admin Template | Ecommerce Dashboard</title>
-<meta name="description" content="Ecommerce Dashboard" />
+
 <!-- Favicon Tags Start -->
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset('assets/backend')}}/img/favicon/apple-touch-icon-57x57.png" />
