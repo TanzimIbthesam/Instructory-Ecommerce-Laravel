@@ -17,5 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('backend.layouts.inc.master');
 // });
 Route::get('/', function () {
+    return view('frontend.layouts.inc.master');
+});
+Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
 });
