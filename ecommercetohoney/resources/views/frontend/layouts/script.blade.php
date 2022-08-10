@@ -1,4 +1,6 @@
-<script src="{{asset('assets/frontend')}}/js/vendor/jquery-2.2.4.min.js"></script>
+ <!-- Modal area start -->
+    <!-- jquery latest version -->
+    <script src="{{asset('assets/frontend')}}/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap js -->
     <script src="{{asset('assets/frontend')}}/js/bootstrap.min.js"></script>
     <!-- owl.carousel.2.0.0-beta.2.4 css -->

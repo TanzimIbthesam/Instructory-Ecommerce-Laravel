@@ -5,7 +5,7 @@
 <title>ToBeHoney| @yield('title')</title>
 <meta name="description" content="Ecommerce Dashboard" />
   <head>
-    @include('backend.layouts.inc.style')
+    @include('backend.layouts.style')
   </head>
 
   <body>
@@ -68,7 +68,7 @@
     <!-- Search Modal End -->
 
     <!-- Vendor Scripts Start -->
-      @include('backend.layouts.inc.script')
+      @include('backend.layouts.script')
     <!-- Page Specific Scripts End -->
   </body>
 </html>

@@ -1,3 +1,7 @@
+<link rel="shortcut icon" type="image/png" href="{{asset('assets/frontend')}}/images/favicon.png">
+<!-- Place favicon.ico in the root directory -->
+<!-- all css here -->
+<!-- bootstrap v4.0.0-beta.2 css -->
 <link rel="stylesheet" href="{{asset('assets/frontend')}}/css/bootstrap.min.css">
 <!-- owl.carousel.2.0.0-beta.2.4 css -->
 <link rel="stylesheet" href="{{asset('assets/frontend')}}/css/owl.carousel.min.css">
@@ -27,6 +31,6 @@
 <!-- responsive css -->
 
 
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="{{asset('assets/frontend')}}/css/responsive.css">
 <!-- modernizr css -->
 <script src="{{asset('assets/frontend')}}/js/vendor/modernizr-2.8.3.min.js"></script>
