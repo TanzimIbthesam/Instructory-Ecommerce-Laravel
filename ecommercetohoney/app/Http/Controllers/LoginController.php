@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     //
-    public function construct(){
-       return $this->middleware('auth');
-    }
+
     public function loginPage()
     {
         # code...

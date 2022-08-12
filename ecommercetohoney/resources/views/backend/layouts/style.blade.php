@@ -38,4 +38,6 @@
 <!-- Template Base Styles End -->
 
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/main.css" />
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="{{asset('assets/backend')}}/js/base/loader.js"></script>

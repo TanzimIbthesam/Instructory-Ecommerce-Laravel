@@ -1,6 +1,6 @@
-<script src="{{asset('assets/backend')}}/js/vendor/jquery-3.5.1.min.js"></script>
-    <script src="{{asset('assets/backend')}}/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('assets/backend')}}/js/vendor/OverlayScrollbars.min.js"></script>
+<script src="{{ asset('assets/backend/js/vendor/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/backend/js/vendor/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/backend/js/vendor/OverlayScrollbars.min.js') }}"></scrip
 
     <!-- Vendor Scripts End -->
 

@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-
+use Brian2694\Toastr\Facades\Toastr;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('backend.layouts.inc.master');
-// });
+Route::get('/', function () {
+    return view('backend.layouts.inc.master');
+});
 Route::get('/', function () {
     return view('frontend.pages.home');
 });
+
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
 });
@@ -33,6 +35,8 @@ Route::prefix('admin/')->group(function(){
     Route::middleware(['auth'])->group(function(){
         Route::get('dashboard', function () {
             return view('backend.pages.Dashboard');
-        })->name('admin.dashboard')->middleware('auth');
+        })->name('admin.dashboard');
     });
+
+    Route::resource('category', CategoryController::class);
 });
