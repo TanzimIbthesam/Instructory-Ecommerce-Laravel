@@ -32,6 +32,7 @@ class LoginController extends Controller
             return redirect()->intended('admin/dashboard');
         }
 
+
         // return error message
         return back()->withErrors([
             'email' => 'Wrong Credentials found!'

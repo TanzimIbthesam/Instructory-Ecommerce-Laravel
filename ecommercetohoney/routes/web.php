@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 use Brian2694\Toastr\Facades\Toastr;
 /*
@@ -39,4 +40,5 @@ Route::prefix('admin/')->group(function(){
     });
 
     Route::resource('category', CategoryController::class);
+    Route::resource('testimonial', TestimonialController::class);
 });
