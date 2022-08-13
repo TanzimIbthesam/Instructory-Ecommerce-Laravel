@@ -1,7 +1,10 @@
 @extends('backend.layouts.master')
 
 @section('title') Testimonial Create @endsection
-
+@push('admin_style')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css"master
+integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@endpush
 
 
 @section('admin_content')
@@ -58,7 +61,7 @@
 
                     <div class="mb-3">
                         <label for="client-image" class="form-label">Client Image</label>
-                        <input type="file" class="form-control dropify" name="client_image" id="">
+                        <input type="file" class="form-control" name="client_image" id="">
                         @error('client_image')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -84,11 +87,12 @@
     </div>
 </div>
 @endsection
-
-
+@push('admin_script')
+<script src="{{ asset('assets/backend/js/vendor/jquery-3.5.1.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $('.dropify').dropify();
 </script>
+@endpush
 
 
