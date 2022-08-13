@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
@@ -16,11 +17,9 @@ use Brian2694\Toastr\Facades\Toastr;
 |
 */
 
-Route::get('/', function () {
-    return view('backend.layouts.inc.master');
-});
-Route::get('/', function () {
-    return view('frontend.pages.home');
+
+Route::prefix('')->group(function(){
+    Route::get('/', [HomeController::class, 'home'])->name('home');
 });
 
 Route::get('/dashboard', function () {
