@@ -14,7 +14,7 @@
                     @foreach ($testimonials as $testimonial)
                         <div class="test-items test-items2">
                             <div class="test-content">
-                                <p>{{ $testimonial->client_message }}</p>
+                                <p>{{ $testimonial->client_message }} </p>
                                 <h2>{{ $testimonial->client_name }}</h2>
                                 <p>{{ $testimonial->client_designation }}</p>
                             </div>
