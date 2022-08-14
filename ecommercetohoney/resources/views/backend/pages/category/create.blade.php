@@ -9,7 +9,7 @@
 @section('admin_content')
 <div class="row">
     <h1>Category Create Form</h1>
-    {!! Toastr::success() !!}
+
     <div class="col-12">
         <div class="d-flex justify-content-start">
             <a href="{{ route('category.index') }}" class="btn btn-primary">

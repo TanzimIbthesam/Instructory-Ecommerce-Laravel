@@ -7,7 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Brian2694\Toastr\Facades\Toastr;
-use Image;
+use Intervention\Image\Facades\Image;
 class CategoryController extends Controller
 {
     /**
@@ -18,7 +18,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $categories = Category::latest('id')->select(['id', 'title', 'slug','updated_at'])->paginate();
+        $categories = Category::latest('id')->select(['id', 'title', 'slug','category_image','updated_at'])
+        ->paginate();
 
         return view('backend.pages.category.index', compact('categories'));
     }
@@ -133,7 +134,7 @@ class CategoryController extends Controller
             $new_photo_location = $photo_location . $new_photo_name;
             Image::make($uploaded_photo)->resize(300,260)->save(base_path($new_photo_location), 40);
             //$user = User::find($category->id);
-            $check = $category->update([
+             $category->update([
                 'category_image' => $new_photo_name,
             ]);
         }
