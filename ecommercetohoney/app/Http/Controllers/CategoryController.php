@@ -96,7 +96,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->title),
             'is_active' => $request->filled('is_active')
         ]);
-        Toastr::success('Data Updated Successfully!');
+        $this->image_upload($request, $category->id);
         return redirect()->route('category.index');
     }
 
