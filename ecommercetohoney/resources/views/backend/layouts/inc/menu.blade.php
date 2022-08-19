@@ -1,11 +1,29 @@
 <div class="menu-container flex-grow-1">
     <ul id="menu" class="menu">
       <li>
-        <a href="Dashboard.html">
+        <a href="{{route('admin.dashboard')}}">
           <i data-cs-icon="shop" class="icon" data-cs-size="18"></i>
           <span class="label">Dashboard</span>
         </a>
       </li>
+      <li>
+        <a href="#categories" data-href="">
+            <i data-cs-icon="cupcake" class="icon" data-cs-size="18"></i>
+            <span class="label">Categories</span>
+        </a>
+        <ul id="categories">
+            <li>
+                <a href="{{ route('category.index') }}">
+                    <span class="label">List</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('category.create') }}">
+                    <span class="label">Add New</span>
+                </a>
+            </li>
+        </ul>
+    </li>
       <li>
         <a href="#products" data-href="Products.html">
           <i data-cs-icon="cupcake" class="icon" data-cs-size="18"></i>
@@ -13,13 +31,13 @@
         </a>
         <ul id="products">
           <li>
-            <a href="Products.List.html">
+            <a href="{{route('products.index')}}">
               <span class="label">List</span>
             </a>
           </li>
           <li>
-            <a href="Products.Detail.html">
-              <span class="label">Detail</span>
+            <a href="{{route('products.create')}}">
+              <span class="label">Add new</span>
             </a>
           </li>
         </ul>

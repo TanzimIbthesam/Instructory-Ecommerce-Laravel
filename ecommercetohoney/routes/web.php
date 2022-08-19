@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 use Brian2694\Toastr\Facades\Toastr;
@@ -36,8 +37,10 @@ Route::prefix('admin/')->group(function(){
         Route::get('dashboard', function () {
             return view('backend.pages.Dashboard');
         })->name('admin.dashboard');
+        Route::resource('category', CategoryController::class);
+        Route::resource('testimonial', TestimonialController::class);
+        Route::resource('products', ProductController::class);
     });
 
-    Route::resource('category', CategoryController::class);
-    Route::resource('testimonial', TestimonialController::class);
+
 });
