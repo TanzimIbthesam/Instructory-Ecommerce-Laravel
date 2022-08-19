@@ -45,7 +45,7 @@
                             <td>{{ $category->updated_at->format('d M Y') }}</td>
                             <td>
                                 <img src="{{asset('uploads/category')}}/{{ $category->category_image }}
-                                "alt="" class="img-fluid rounded h-50 w-50">
+                                "alt="" class="img-fluid rounded-circle w-25 h-25">
                             </td>
                             <td>{{ $category->title }}</td>
                             <td>{{ $category->slug }}</td>
