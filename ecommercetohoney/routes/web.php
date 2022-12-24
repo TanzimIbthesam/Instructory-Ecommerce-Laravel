@@ -21,6 +21,7 @@ use Brian2694\Toastr\Facades\Toastr;
 
 Route::prefix('')->group(function(){
     Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::get('/shop',[HomeController::class,'shopPage'])->name('shop.page');
 });
 
 Route::get('/dashboard', function () {

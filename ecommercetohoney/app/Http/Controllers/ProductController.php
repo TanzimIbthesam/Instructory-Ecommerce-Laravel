@@ -7,6 +7,7 @@ use App\Http\Requests\ProductUpdateRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
@@ -66,7 +67,7 @@ class ProductController extends Controller
             'long_description' => $request->long_description,
             'additional_info' => $request->additional_info,
         ]);
-
+        Toastr::success('Data Stored Successfully!');
         $this->image_upload($request, $product->id);
         $this->multiple_image__upload($request, $product->id);
         return redirect()->route('products.index');
@@ -140,8 +141,8 @@ class ProductController extends Controller
             unlink($photo_location);
         }
 
-        $product->delete();
-
+      $product->delete();
+      Toastr::success('Product Deleted successfully');
 
         return redirect()->route('products.index');
 
