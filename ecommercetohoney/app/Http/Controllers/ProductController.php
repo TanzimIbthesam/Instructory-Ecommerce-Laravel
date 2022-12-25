@@ -67,7 +67,8 @@ class ProductController extends Controller
             'long_description' => $request->long_description,
             'additional_info' => $request->additional_info,
         ]);
-        Toastr::success('Data Stored Successfully!');
+        // Toastr::success();
+        Toastr::success('Data stored successfully again');
         $this->image_upload($request, $product->id);
         $this->multiple_image__upload($request, $product->id);
         return redirect()->route('products.index');

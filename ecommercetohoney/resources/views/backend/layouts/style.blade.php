@@ -31,8 +31,8 @@
 <!-- Vendor Styles Start -->
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/vendor/bootstrap.min.css" />
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/vendor/OverlayScrollbars.min.css" />
-<!--Toatr -->
-<link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<!--Toastr -->
+{{-- <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> --}}
 <!-- Vendor Styles End -->
 <!-- Template Base Styles Start -->
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/styles.css" />
@@ -42,5 +42,5 @@
 
 <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="{{asset('assets/backend')}}/js/base/loader.js"></script>
-
+<link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 @stack('admin_style')
