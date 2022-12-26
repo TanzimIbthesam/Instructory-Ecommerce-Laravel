@@ -28,6 +28,11 @@
                         <p class="pull-left">${{ $product->product_price }}
 
                         </p>
+                        <ul class="pull-right d-flex">
+                           @for ($i=0 ; $i<$product->product_rating;$i++)
+                              <li><i class="fa fa-star"></i></li>
+                           @endfor
+                        </ul>
 
                     </div>
                 </div>

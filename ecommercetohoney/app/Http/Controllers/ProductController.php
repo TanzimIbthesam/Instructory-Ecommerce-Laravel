@@ -23,11 +23,11 @@ class ProductController extends Controller
         //
         $products =Product::where('is_active', 1)
             ->with('category')
-            ->latest('id')
+             ->latest('id')
             ->select('id', 'category_id', 'name', 'slug',
             'product_price', 'product_stock', 'alert_quantity',
             'product_image', 'product_rating','updated_at')
-            ->paginate(15);
+            ->paginate(5);
 
         //return $products;
 

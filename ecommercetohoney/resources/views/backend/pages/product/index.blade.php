@@ -41,6 +41,9 @@
                 </thead>
                 <tbody>
                     @foreach ($products as $product)
+                          {{-- @php
+                              var_dump($products)
+                          @endphp --}}
                         <tr>
                             <td scope="row">{{ $products->firstItem()+$loop->index }}</th>
                             <td><img src="{{ asset('uploads/product_photos') }}/{{ $product->product_image }}" alt="" class="img-fluid rounded w-25 h-25"></td>
